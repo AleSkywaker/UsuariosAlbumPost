@@ -1,0 +1,62 @@
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" [routerLink]="['/search']" [routerLinkActive]="['activado']">{{title}}</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Acerca del Proyecto</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="buscarPost()" class="form-control" placeholder="Buscar posts...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="col-lg-10 col-lg-offset-1">
+    <div class="thumbnail well">
+        <i class="fa fa-times fa-2x" aria-hidden="true" [routerLink]="['/search']"></i>
+       
+        <h1>Exercise</h1>
+        <p>
+            We want you to make a graphical interface that displays a list of users who have associated posts and albums.
+        Please use the API from https://jsonplaceholder.typicode.com/ using AJAX requests. The goal is to develop an admin
+        site of a service where user can send a post to an album. There is no need to develop a CRUD for users, user list
+        can be predefined or inserted by script to jsonplaceholder.typicode.com or use the users already available there.
+        If the candidate wants to add the ability to randomly insert posts on albums, that ok. The appearance of UX / UI
+        interface design is your free decision, any shortcut to include design/responsive/interaction/animation/etc. will
+        be appreciated. The interface must contain: A Section with a list of users. If a user is selected, a subsection with
+        a list of albums and a list of posts, both associated to the selected user, will be displayed. If an album is selected,
+        a subsection with a list of images associated to the selected album and user will be displayed. If a post is selected,
+        a subsection with the post information and all messages related to that post will be displayed. Ability to search
+        by word any of the posts from any of the users on the main section, or if a user has been selected, search will be
+        limited to the selected user (sub section). A general chart showing the number of posts and the number of albums
+        per user (we recommend to use graphics library Highcharts). In the graph it should be possible to select which users
+        want to display the graph. In addition it should be possible to select the graphic is done by the number of posts,
+        the number of albums or the sum of both.
+        </p>
+        <hr>
+        <h4>Pending Tasks</h4>
+        <ul>
+            <li>chart showing the number of posts and the number of albums per user</li>
+            <li>Clean the code</li>
+            <li>Shearch post per user</li>
+            <li>Cover code with unit testing</li>
+            <li>Cover code with E2E testing (Protractor, etc)</li>
+            <li>Dockerize application to run as a container (with docker-compose)</li>
+        </ul>
+    </div>
+</div>
+
+
+<footer class="fixed-bottom navbar-fixed-bottom text-center">
+    <p><strong>Diseñado y desarrollado por Alex Colombo&copy; 2017.</strong></p>
+</footer>

@@ -1,0 +1,104 @@
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding-left: 0px;
+  margin-left: 0px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+          box-shadow: 10px 10px 5px #888888;
+}
+.well{
+  min-height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  margin-left: 0px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 10px 10px 5px #888888;
+}
+
+
+
+.thumbnail:hover {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding-left: 0px;
+  margin-left: 0px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+          box-shadow: 10px 10px 5px #888888;
+}
+.well:hover {
+   min-height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  margin-left: 0px;
+  background-color: #b1fe98;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: 10px 10px 5px #888888;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  /*border-color: #337ab7;*/
+  border-color: #ff0000;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+
+.posts{
+    list-style: none;
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2% 8%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    margin-left: -28px;
+    
+}
+/*.row {
+  margin-right: -12px;
+  margin-left: -50px;
+}*/
+.imagenCuston{
+  width : 15%;
+  height : 15%;
+  padding-left: 2%;
+}
+.albums{
+    list-style: none;
+    margin-left: -28px;
+    
+    
+    
+    
+    
+}

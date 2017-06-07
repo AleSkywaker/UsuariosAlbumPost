@@ -1,0 +1,99 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Arturo",
+      "apellido": "Fernandez",
+      "email": "arturo@eamil.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en Rusia 2014",
+        "vacaciones en Genova 2011",
+        "vacaciones en Barcelona",
+        "vacaciones en madrid"
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Jose",
+      "apellido": "Garcia",
+      "email": "jose@eamil.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en roma 2014",
+        "vacaciones en venecia 2011",
+        "vacaciones en Milan",
+        "vacaciones en Tailandia",
+        "vacaiones en la playita",
+        "Vacaciones lokas"
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Maria",
+      "apellido": "Fernandez",
+      "email": "maria@eamil.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en China 2014",
+        "vacaciones en Brasil 2011",
+        "vacaciones en Francia",
+        "vacaiones en Berlin",
+        "vacaciones en Praga",
+        "vacaciones todo el año"
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Monica",
+      "apellido": "Naranjo",
+      "email": "monica@email.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en Rusia 2014",
+        "vacaciones en Genova 2011",
+        "vacaciones en Barcelona",
+        "vacaciones en el mar",
+        "vacas"
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Jose",
+      "apellido": "Gutierrez",
+      "email": "maria@eamil.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en Lisboa 2014",
+        "vacaciones en Oporto 2011",
+        "vacaciones en Algarve",
+        "buenas vacaciones"
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Alicia",
+      "apellido": "Martinez",
+      "email": "maria@eamil.com",
+      "albums": [
+        "Vacaciones"
+      ],
+      "posts": [
+        "vacaciones en Lisboa 2014",
+        "vacaciones en Oporto 2011",
+        "vacaciones en Algarve",
+        "Que guai tus vacas"
+      ]
+    }
+  ]
+}
