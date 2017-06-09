@@ -53,11 +53,9 @@ export class SearchComponent {
     ngOnInit() {
         this._usuarioService.buscarPost2()
             .subscribe(
-            /*result => this.datos = JSON.stringify(result),*/
+            /*data => this.datos = JSON.stringify(data),*/
             data => {
-
                 console.log(data);
-
                 this.usuarios = data;
                 console.log("usuarios " + this.usuarios);
             },
