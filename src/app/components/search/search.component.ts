@@ -20,23 +20,20 @@ export class SearchComponent {
     public usuarios: Array<any>;
     public searchStr: string;
     public titulo: string = "Buscar Post";
-
-    public buscar:string;
-
-
-
+    public buscar: string;
 
     constructor(private _usuarioService: UsuarioService) {
 
         this.usuario = new Usuario(0, "Alex", "Garcia", "email@email.com", [], []);
     }
 
-
     buscarPost() {
         this._usuarioService.buscarPost(this.searchStr)
             .subscribe(res => {
-                this.usuarios = res;
-                console.log(res);
+                this.datos = JSON.stringify(res);
+
+                console.log("Hola Hola Hola" + res);
+
             })
         console.log(this.searchStr);
     }
@@ -57,33 +54,19 @@ export class SearchComponent {
         this._usuarioService.buscarPost2()
             .subscribe(
             /*result => this.datos = JSON.stringify(result),*/
-            result => {
+            data => {
 
-                console.log(result);
+                console.log(data);
 
-                this.usuarios = result;
+                this.usuarios = data;
                 console.log("usuarios " + this.usuarios);
             },
             error => alert(error),
             () => console.log('finalizado')
             );
-
     }
-    
-  /*  detallesUsuario(id: number) {
-     this._usuarioService.usuario(id)
-            .subscribe(res => {
-                console.log(res.posts);
-                   alert("res.posts");    
-            }) 
-    }*/
 
-
-
-
-
+    prueba(id: number) {
+         console.log(id);
+    }
 }
-
-
-
-

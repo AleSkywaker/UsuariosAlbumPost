@@ -1,82 +1,62 @@
 <nav class="navbar navbar-inverse">
-      <div class="container">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" [routerLink]="['/search']" [routerLinkActive]="['activado']">{{title}}</a>
+            <a class="navbar-brand" [routerLink]="['/search']" [routerLinkActive]="['activado']">{{title}}</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav"> 
-              <li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Acerca del Proyecto</a></li> 
-             
-          </ul>
-           <form class="navbar-form navbar-right">
-            <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="buscarPost()" class="form-control" placeholder="Buscar posts...">
-          </form>
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/home']" [routerLinkActive]="['activado']">Acerca del Proyecto</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="buscarPost()" class="form-control" placeholder="Buscar posts...">
+            </form>
         </div>
-       </div>
-    </nav>
+    </div>
+</nav>
 
 <div *ngIf="!searchStr" class="row">
-    
-        <div class="col-lg-2" *ngFor="let usuario of usuarios, let i = index">
-            <div class="thumbnail well" [routerLink]="['/usuario', usuario.id]" >
-
-                <p class="text-center" >   
+    <div class="col-lg-2" *ngFor="let usuario of usuarios, let i = index">
+        <div class="thumbnail well" [routerLink]="['/usuario', usuario.id]">
+            <p class="text-center">
                 <a><strong>{{usuario.nombre}} {{usuario.apellido}}</strong></a>
                 <span><img src="./../assets/avatar/{{usuario.id}}.jpg" class="img-circle imagenCuston" alt=""></span>
-                </p>
-                
-                <hr>
-                 <h5 class="text-center"><strong>ALBUMS</strong></h5>
-                <ul>
-                    <li class="albums" *ngFor="let album of usuario.albums">
-                        <span><img src="./../assets/albums/{{usuario.id}}.jpg" class="img-thumbnail " alt=""></span>
-                    </li>
-                </ul>
-                <hr>
-                <h4 class="text-center"><strong>POSTS</strong></h4>
-                <ul>
-                    <h6 class="posts" *ngFor="let post of usuario.posts">{{post}}</h6>
-                </ul>
-                   
-            </div>
-                   <div class="clearfix"></div>
+            </p>
+            <hr>
+            <h5 class="text-center"><strong>ALBUMS</strong></h5>
+            <ul>
+                <li class="albums" *ngFor="let album of usuario.albums">
+                    <span><img src="./../assets/albums/{{usuario.id}}.jpg" class="img-thumbnail " alt=""></span>
+                </li>
+            </ul>
+            <hr>
+            <h4 class="text-center"><strong>POSTS</strong></h4>
+            <ul>
+                <h6 class="posts" *ngFor="let post of usuario.posts">{{post}}</h6>
+            </ul>
         </div>
-   
+        <div class="clearfix"></div>
+    </div>
     <div class="clearfix"></div>
     <footer class="fixed-bottom navbar-fixed-bottom text-center">
         <p><strong>Diseñado y desarrollado por Alex Colombo&copy; 2017.</strong></p>
-      </footer>
+    </footer>
 </div>
 
-
-<div *ngIf="searchStr"  class="row">
+<div *ngIf="searchStr" class="row">
     <ul>
-        <div class="col-lg-10" *ngFor="let usuario of usuarios, let i = index"   (click)="detallesUsuario(usuario.id)">
-            
-
-                
-                <ul *ngFor="let post of usuario.posts">
-                    
-                <h6 class="posts"> <span><img src="./../assets/avatar/{{usuario.id}}.jpg" class="img-circle imagenCuston" alt=""></span> {{post}}</h6>
-                </ul>
-        
-                   <div class="clearfix"></div>
+        <div class="col-lg-10" *ngFor="let usuario of usuarios, let i = index">
+            <ul *ngFor="let post of usuario.posts">
+                <h6 class="posts" *ngIf="post == searchStr" (click)="prueba(post)"> <span><img src="./../assets/avatar/{{usuario.id}}.jpg" class="img-circle imagenCuston" alt=""></span> {{post}}</h6>
+            </ul>
+            <div class="clearfix"></div>
         </div>
-       
     </ul>
-
-
-     
-
-
-    
 </div>
-
- 
-     

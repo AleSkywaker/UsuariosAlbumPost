@@ -24,18 +24,16 @@ export class UsuarioComponent {
     }
 
     ngOnInit() {
-              this._route.params
+        this._route.params
             .map(params => params['id'])
             .subscribe((id) => {
-                console.log("este es el id : "+id)
+                console.log("este es el id : " + id)
                 this._usuarioService.usuario(id)
                     .subscribe(usuario => {
                         this.usuario = usuario;
                     })
             })
 
-          
-        
     }
 
     posts: string;
@@ -49,20 +47,19 @@ export class UsuarioComponent {
                 this.postArray.push(this.posts);
                 console.log(res.posts);
 
-        this._usuarioService.addPosts2(res)
-        .subscribe(
-            response => {
-                /*alert('Has enviado un post');*/
-                this._router.navigate(['/search']);
-                
-            },
-            error => {
-                console.log(<any>error);
-            });  
+                this._usuarioService.addPosts2(res)
+                    .subscribe(
+                    response => {
+                        /*alert('Has enviado un post');*/
+                        this._router.navigate(['/search']);
+
+                    },
+                    error => {
+                        console.log(<any>error);
+                    });
             })
     }
+    prueba(id: number) {
+        console.log(id);
+    }
 }
-
-
-
-
