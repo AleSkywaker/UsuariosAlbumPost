@@ -15,6 +15,7 @@ export class UsuarioComponent {
     public usuario: Usuario;
     public post: Post;
     public postArray: Array<any>;
+    
 
 
     constructor(
@@ -62,4 +63,5 @@ export class UsuarioComponent {
     prueba(id: number) {
         console.log(id);
     }
+     
 }

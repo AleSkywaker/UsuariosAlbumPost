@@ -46,7 +46,10 @@
         "vacaciones en Francia",
         "vacaiones en Berlin",
         "vacaciones en Praga",
-        "vacaciones todo el año"
+        "vacaciones todo el año",
+        null,
+        null,
+        "hola"
       ]
     },
     {
@@ -62,7 +65,8 @@
         "vacaciones en Genova 2011",
         "vacaciones en Barcelona",
         "vacaciones en el mar",
-        "vacaciones en el caribe"
+        "vacaciones en el caribe",
+        "hola caracola"
       ]
     },
     {
@@ -77,7 +81,8 @@
         "vacaciones en Lisboa 2014",
         "vacaciones en Oporto 2011",
         "vacaciones en Algarve",
-        "buenas vacaciones"
+        "buenas vacaciones",
+        "guai tus vacaciones"
       ]
     },
     {
